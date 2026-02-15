@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Events & Calendar - Sound of Honour Global | Upcoming worship services, prayer meetings, concerts, festivals, and outreach programs.">
+    <title>Sound of Honour Global - Events</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="upload/images/logo.jpeg">
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== VIDEO HERO SECTION ===== -->
+    <section class="video-hero" id="home">
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="https://player.vimeo.com/external/415977294.hd.mp4?s=0b3f8e8f8a8d8c8b8e8f8a8d8c8b8e8f8a8d8c&profile_id=174" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <!-- Header -->
+        <header class="site-header" id="siteHeader">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <img src="upload/images/logo.jpeg" alt="Sound of Honour Logo" class="logo-img">
+                    <div class="logo-text">Sound of Honour <span>Global</span></div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="about.html" class="nav-link"><i class="fas fa-church"></i> About</a>
+                    <a href="ministry.html" class="nav-link"><i class="fas fa-hands-praying"></i> Ministry</a>
+                    <a href="services.html" class="nav-link"><i class="fas fa-pray"></i> Services</a>
+                    <a href="events.html" class="nav-link active"><i class="fas fa-calendar-alt"></i> Events</a>
+                    <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a>
+                    <a href="donate.html" class="nav-link"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html" class="mobile-nav-link"><i class="fas fa-church"></i> About</a>
+                <a href="ministry.html" class="mobile-nav-link"><i class="fas fa-hands-praying"></i> Ministry</a>
+                <a href="services.html" class="mobile-nav-link"><i class="fas fa-pray"></i> Services</a>
+                <a href="events.html" class="mobile-nav-link"><i class="fas fa-calendar-alt"></i> Events</a>
+                <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i> Gallery</a>
+                <a href="donate.html" class="mobile-nav-link"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+                <a href="index.html#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title">Events & Calendar</h1>
+            <p class="hero-subtitle">Join us for powerful worship, prayer, outreach, concerts, and life-changing fellowship</p>
+            <div class="hero-buttons">
+                <a href="#calendar" class="btn btn-primary"><i class="fas fa-calendar"></i> View Calendar</a>
+                <a href="#regular" class="btn btn-secondary"><i class="fas fa-clock"></i> Regular Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <section class="section" id="calendar">
+            <h2 class="section-title">Interactive Events Calendar</h2>
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 40px; color: #666;">
+                Click on any event for more details. Recurring events appear automatically.
+            </p>
+
+            <!-- FullCalendar -->
+            <div id="calendar"></div>
+        </section>
+
+        <section class="section" id="regular">
+            <h2 class="section-title">Our Regular Weekly Schedule</h2>
+
+            <div class="cards-grid">
+                <!-- Sunday Worship Service -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/worship-service-1.jpeg" alt="Sunday Worship 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/worship-service-2.jpeg" alt="Sunday Worship 2" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/worship-service-3.jpeg" alt="Sunday Worship 3" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Weekly Service</span>
+                        <h3 class="card-title">Sunday Worship Service</h3>
+                        <p class="card-text">Powerful praise, anointed worship, and life-changing teaching from God's Word.</p>
+                        <div class="card-footer">
+                            <span class="card-date">Every Sunday • 12:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bible Study -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/bible-study-2.JPG" alt="Bible Study 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/bible-study.JPG" alt="Bible Study 2" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Discipleship</span>
+                        <h3 class="card-title">Bible Study</h3>
+                        <p class="card-text">In-depth exploration of Scripture in a welcoming small group setting.</p>
+                        <div class="card-footer">
+                            <span class="card-date">Every Tuesday • 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Midweek Prayer Meeting -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/prayer-meeting.jpg" alt="Prayer 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/prayer-request.jpg" alt="Prayer 2" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/prayer-gathering.JPG" alt="Prayer 3" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Intercession</span>
+                        <h3 class="card-title">Midweek Prayer Meeting</h3>
+                        <p class="card-text">Corporate prayer, worship, and spiritual warfare.</p>
+                        <div class="card-footer">
+                            <span class="card-date">Every Wednesday • 7:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Feeding Program -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/community-welfare-1.jpeg" alt="Feeding 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/community-welfare-2.jpeg" alt="Feeding 2" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/community-welfare-3.jpeg" alt="Feeding 3" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Outreach</span>
+                        <h3 class="card-title">Community Feeding Program</h3>
+                        <p class="card-text">Providing nutritious meals and hope to families in need.</p>
+                        <div class="card-footer">
+                            <span class="card-date">Every Thursday • 11:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth Ministry -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/youth-ministry.jpg" alt="Youth 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/youth-ministry-2.jpeg" alt="Youth 2" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/youth-ministry-3.jpeg" alt="Youth 3" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Empowerment</span>
+                        <h3 class="card-title">Youth Ministry</h3>
+                        <p class="card-text">Dynamic worship, teaching, and mentorship for young people.</p>
+                        <div class="card-footer">
+                            <span class="card-date">Every Friday • 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Street Evangelism -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/evangelism-1.jpeg" alt="Evangelism 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/evangelism-2.jpeg" alt="Evangelism 2" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/evangelism-3.jpeg" alt="Evangelism 3" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Outreach</span>
+                        <h3 class="card-title">Street Evangelism & Outreach</h3>
+                        <p class="card-text">Taking the Gospel to the streets with love and boldness.</p>
+                        <div class="card-footer">
+                            <span class="card-date">Every Saturday • 10:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly All-Night Prayer -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/all-night-prayer.jpg" alt="All-Night Prayer 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/all-night.jpg" alt="All-Night Prayer 2" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Extended Worship</span>
+                        <h3 class="card-title">Monthly Worship Night & All-Night Prayer</h3>
+                        <p class="card-text">Intensive worship, prayer, and seeking God's presence.</p>
+                        <div class="card-footer">
+                            <span class="card-date">Last Friday of Every Month • 7:00 PM – 6:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Special Upcoming Events</h2>
+
+            <div class="cards-grid">
+                <!-- New Year Crossover -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/new-year-prayer-1.jpeg" alt="New Year Vigil 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/new-year-prayer-2.jpeg" alt="New Year Vigil 2" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/new-year-prayer-3.jpeg" alt="New Year Vigil 3" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Special Event</span>
+                        <h3 class="card-title">New Year Crossover Prayer Vigil</h3>
+                        <p class="card-text">Cross over into 2026 with thanksgiving, prayer, worship, and prophetic declaration.</p>
+                        <div class="card-footer">
+                            <span class="card-date">December 31, 2025 – January 1, 2026 • 8:00 PM – 6:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Annual Praise Festival -->
+                <div class="card slideshow-card">
+                    <div class="slideshow-container">
+                        <div class="slide fade"><img src="upload/images/concert-1.jpeg" alt="Festival 1" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/concert-2.jpeg" alt="Festival 2" class="card-img"></div>
+                        <div class="slide fade"><img src="upload/images/concert-3.jpeg" alt="Festival 3" class="card-img"></div>
+                        <a class="prev" onclick="changeSlide(-1, this)">❮</a>
+                        <a class="next" onclick="changeSlide(1, this)">❯</a>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Concert</span>
+                        <h3 class="card-title">Annual Concerts of Praise Festival</h3>
+                        <p class="card-text">A night of explosive worship with guest ministers, our worship team, and powerful ministry.</p>
+                        <div class="card-footer">
+                            <span class="card-date">January 25, 2026 • 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sound of Honour Global</h4>
+                <p>Spreading the Gospel through worship, music education, evangelism, and compassionate action since 2019.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Kamiti Rd, Kahawa West, Nairobi, Kenya</p>
+                <p><i class="fas fa-phone"></i> +254 711509194</p>
+                <p><i class="fas fa-envelope"></i> info@soundofhonour.org</p>
+
+                <div class="social-links">
+                    <a href="https://facebook.com/soundofhonour" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/soundofhonour" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/soundofhonour" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html" style="color: white; text-decoration: none;">Home</a></p>
+                <p><a href="about.html" style="color: white; text-decoration: none;">About</a></p>
+                <p><a href="index.html#ministry" style="color: white; text-decoration: none;">Services</a></p>
+                <p><a href="donate.html" style="color: white; text-decoration: none;">Donate</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Sound of Honour Global. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/254711509194" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-nav').classList.toggle('active');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Header & back-to-top on scroll
+        window.addEventListener('scroll', function() {
+            document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 100);
+            document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500);
+        });
+
+        // Slideshow functionality (same as other pages)
+        let slideIndices = {};
+
+        function changeSlide(n, btn) {
+            const container = btn.closest('.slideshow-container');
+            const slides = container.querySelectorAll('.slide');
+            const dots = container.querySelector('.dots');
+            if (!slideIndices[container]) slideIndices[container] = 0;
+            slideIndices[container] += n;
+            if (slideIndices[container] >= slides.length) slideIndices[container] = 0;
+            if (slideIndices[container] < 0) slideIndices[container] = slides.length - 1;
+            showSlide(container, slideIndices[container], slides, dots);
+        }
+
+        function showSlide(container, index, slides, dotsContainer) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = i === index ? '1' : '0';
+            });
+            if (dotsContainer) {
+                dotsContainer.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'dot';
+                    dot.onclick = () => {
+                        slideIndices[container] = i;
+                        showSlide(container, i, slides, dotsContainer);
+                    };
+                    if (i === index) dot.classList.add('active');
+                    dotsContainer.appendChild(dot);
+                });
+            }
+        }
+
+        // Initialize all slideshows with auto-advance
+        document.querySelectorAll('.slideshow-container').forEach(container => {
+            const slides = container.querySelectorAll('.slide');
+            const dots = container.querySelector('.dots');
+            slideIndices[container] = 0;
+            showSlide(container, 0, slides, dots);
+            setInterval(() => changeSlide(1, container.querySelector('.next')), 5000);
+        });
+
+        // FullCalendar Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+            if (calendarEl) {
+                const calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    initialDate: '2025-12-31', // Current date
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,listWeek'
+                    },
+                    height: 'auto',
+                    events: [
+                        // Recurring Weekly Events
+                        { title: 'Sunday Worship Service', rrule: { freq: 'weekly', byweekday: [0] }, color: '#00695c' },
+                        { title: 'Bible Study', rrule: { freq: 'weekly', byweekday: [2] }, color: '#388e3c' },
+                        { title: 'Midweek Prayer Meeting', rrule: { freq: 'weekly', byweekday: [3] }, color: '#1976d2' },
+                        { title: 'Community Feeding Program', rrule: { freq: 'weekly', byweekday: [4] }, color: '#009688' },
+                        { title: 'Youth Ministry', rrule: { freq: 'weekly', byweekday: [5] }, color: '#7b1fa2' },
+                        { title: 'Street Evangelism & Outreach', rrule: { freq: 'weekly', byweekday: [6] }, color: '#f57c00' },
+                        { title: 'Monthly Worship Night & All-Night Prayer', rrule: { freq: 'monthly', bysetpos: -1, byweekday: [5] }, color: '#d32f2f' },
+
+                        // Special Events
+                        { 
+                            title: 'New Year Crossover Prayer Vigil', 
+                            start: '2025-12-31T20:00:00', 
+                            end: '2026-01-01T06:00:00', 
+                            color: '#ff9800',
+                            description: 'Cross over into 2026 with prayer, worship, and thanksgiving'
+                        },
+                        { 
+                            title: 'Annual Concerts of Praise Festival', 
+                            start: '2026-01-25', 
+                            color: '#e91e63',
+                            description: 'Explosive night of worship with guest ministers'
+                        }
+                    ],
+                    eventClick: function(info) {
+                        const desc = info.event.extendedProps.description || 'Join us for this powerful gathering!';
+                        const dateStr = info.event.start ? info.event.start.toLocaleString() : 'Recurring Event';
+                        alert(`Event: ${info.event.title}\nDate: ${dateStr}\n\n${desc}`);
+                    }
+                });
+                calendar.render();
+            }
+        });
+    </script>
+</body>
+</html>
